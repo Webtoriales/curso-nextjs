@@ -16,9 +16,9 @@ export default function Post() {
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;
-          color: inherit;
+          color: black;
           text-decoration: none;
-          border: 1px solid #eaeaea;
+          border: 2px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
