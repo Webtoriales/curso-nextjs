@@ -3,7 +3,6 @@ import Layout from '../../components/layout';
 import Link from 'next/link';
 
 export default function Posts({ posts }) {
-  console.log("posts!!", posts);
   // CLIENT SIDE RENDERING
   // const [posts, setPosts] = React.useState([]);
 
