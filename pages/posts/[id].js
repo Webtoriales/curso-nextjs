@@ -2,13 +2,16 @@ import { useRouter } from 'next/router';
 import Title from '../../components/title';
 import Layout from '../../components/layout';
 
-export default function Post() {
-  const router = useRouter();
+export default function Post({ post }) {
+  // const router = useRouter();
 
   return (
     <Layout>
       <Title>Post Details</Title>
-      <p>Post ID: {router.query.id}</p>
+      <div className='card'>
+        <h2>{post.title}</h2>
+        <p>{post.body}</p>
+      </div>
       <style jsx>
       {`
         .card {
@@ -41,4 +44,14 @@ export default function Post() {
       </style>
     </Layout>
   )
+}
+
+export async function getServerSideProps({ params }) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
+  const post = await res.json();
+  return {
+    props: {
+      post
+    }
+  }
 }
