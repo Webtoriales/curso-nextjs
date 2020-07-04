@@ -2,6 +2,7 @@ import Title from '../../components/title';
 import Layout from '../../components/layout';
 
 export default function Post({ post }) {
+  // const router = useRouter();
 
   return (
     <Layout>
@@ -47,7 +48,6 @@ export default function Post({ post }) {
 export async function getServerSideProps({ params }) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
   const post = await res.json();
-
   return {
     props: {
       post
