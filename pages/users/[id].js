@@ -58,7 +58,7 @@ export default function User({ user }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch('https://jsonplaceholder.typicode.com/users');
   const users = await res.json();
 
   // const paths = [
