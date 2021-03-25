@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Title from '../../components/title';
-import Layout from '../../components/layout';
 import Link from 'next/link';
 
 export default function Posts({ posts }) {
@@ -18,7 +17,7 @@ export default function Posts({ posts }) {
   // }, []);
 
   return(
-    <Layout>
+    <>
       <Head>
         <title>Landing page de posts</title>
         <meta name="description" content="En este curso de Webtoriales aprenderas sobre NextJS"/>
@@ -71,7 +70,7 @@ export default function Posts({ posts }) {
           }
         `}
       </style>
-    </Layout>
+    </>
   )
 }
 

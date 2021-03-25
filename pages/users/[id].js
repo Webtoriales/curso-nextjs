@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Title from './../../components/title';
-import Layout from '../../components/layout';
 
 export default function User({ user }) {
   const router = useRouter();
@@ -12,7 +11,7 @@ export default function User({ user }) {
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>User #{user.id}</title>
         <meta name="description" content="En este curso de Webtoriales aprenderas sobre NextJS"/>
@@ -60,7 +59,7 @@ export default function User({ user }) {
           }
         `}
       </style>
-    </Layout>
+    </>
   )
 }
 
