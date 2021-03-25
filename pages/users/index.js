@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Title from '../../components/title';
-import Layout from '../../components/layout';
 
 export default function Users({ users }) {
   return(
-    <Layout>
+    <>
       <Head>
         <title>Landing page de users</title>
         <meta name="description" content="En este curso de Webtoriales aprenderas sobre NextJS"/>
@@ -62,7 +61,7 @@ export default function Users({ users }) {
         }
       `}
       </style>
-    </Layout>
+    </>
   )
 }
 
